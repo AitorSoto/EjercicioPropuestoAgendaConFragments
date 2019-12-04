@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:id="@+id/view_A"
+            android:orientation="horizontal"
+            android:background="@color/colorAccent">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/account_box"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Etiquetar como"
+            android:textColor="@color/colorAccent"
+            android:textSize="65px"
+            android:layout_marginLeft="16dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/view_B"
+            android:layout_weight="0.3"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/conjuntoCheckbox">
+
+                <CheckBox
+                    android:id="@+id/familia_Checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Familia"
+                    android:textColor="@color/colorAccent"/>
+                <CheckBox
+                    android:id="@+id/amigos_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amigos"
+                    android:textColor="@color/colorAccent"
+                    android:layout_toRightOf="@id/familia_Checkbox"/>
+                <CheckBox
+                    android:id="@+id/trabajo_Checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trabajo"
+                    android:textColor="@color/colorAccent"
+                    android:layout_toRightOf="@id/amigos_checkbox"/>
+
+                <EditText
+                    android:id="@+id/nombreEditText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre"
+                    android:inputType="text"
+                    android:layout_marginTop="16dp"
+                    android:layout_below="@id/amigos_checkbox"/>
+
+                <EditText
+                    android:id="@+id/apellidosEditText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Apellidos"
+                    android:inputType="text"
+                    android:layout_marginTop="16dp"
+                    android:layout_below="@id/nombreEditText2"/>
+
+                <EditText
+                    android:id="@+id/telefonoEditText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tlf."
+                    android:inputType="phone"
+                    android:layout_marginTop="16dp"
+                    android:layout_below="@id/apellidosEditText2"/>
+
+                <EditText
+                    android:id="@+id/emailEditText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Correo"
+                    android:layout_marginTop="16dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_below="@id/telefonoEditText2"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:src="@drawable/check"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_anchor="@id/view_A"
+        app:layout_anchorGravity="bottom|right|end"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

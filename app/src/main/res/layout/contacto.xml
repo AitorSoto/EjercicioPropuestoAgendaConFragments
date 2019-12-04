@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/view_A"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgContacto"
+                android:layout_margin="5dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/account_box"
+                android:background="@color/colorPrimaryDark"/>
+
+            <TextView
+                android:id="@+id/nombreTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/imgContacto"/>
+            <TextView
+                android:id="@+id/apellidosTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/imgContacto"
+                android:layout_below="@id/nombreTextView"/>
+            <TextView
+                android:id="@+id/telefonoTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/imgContacto"
+                android:layout_below="@id/apellidosTextView"/>
+            <TextView
+                android:id="@+id/correoTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:layout_toRightOf="@id/imgContacto"
+                android:layout_below="@id/telefonoTextView"/>
+        </RelativeLayout>
+</androidx.cardview.widget.CardView>
